@@ -147,10 +147,10 @@ public class UserServiceTests
         Action action  = () =>
         {
             userService.AddUser("Tom",
-                "alal",
+                "Andrzejewicz",
                 "kowalski@wp.pl",
                 DateTime.Parse("2000-01-01"),
-                2);
+                6);
             
             
         };
