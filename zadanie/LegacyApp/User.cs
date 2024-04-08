@@ -20,12 +20,17 @@ namespace LegacyApp
             FirstName = firstName;
             LastName = lastName;
             
+            SetLimits();
             
-            if (client.Type == "VeryImportantClient")
+        }
+
+        private void SetLimits()
+        {
+            if (Client.Type == "VeryImportantClient")
             {
                 HasCreditLimit = false;
             }
-            else if (client.Type == "ImportantClient")
+            else if (Client.Type == "ImportantClient")
             {
                 using (var userCreditService = new UserCreditService())
                 {
